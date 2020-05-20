@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Crown Finance Blog</title>
+</head>
+
+<body id="home">
+    <header class="hero blog">
+        <div id="navbar" class="navbar top">
+            <h1 class="logo">
+                <span class="text-primary"><i class="fas fa-book-open"></i> Crown</span>Finance
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#cases">Cases</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h1>Latest from Crown Finance</h1>
+        </div>
+    </header>
+
+    <main>
+        <article class="flex-columns">
+            <div class="row">
+                <div class="column">
+                    <div class="column-1">
+                        <img src="images/blog/blog1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-2 bg-light">
+                        <h2>Investing during volatile markets</h2>
+                        <p class="meta">
+                            <i class="fas fa-user"></i> Posted by <strong>Dave Ramsey</strong> | May 16 2020
+                        </p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi recusandae doloribus libero
+                            esse. Quibusdam cum officiis cumque unde sit. At repellat sequi accusantium incidunt error
+                            ipsum illo laboriosam tempore unde! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Voluptatibus accusamus asperiores, maiores explicabo quidem laboriosam maxime illo ad magnam
+                            odio? </p>
+                        <a href="post.html" class="btn btn-dark">
+                            <i class="fas fa-chevron"></i>
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="flex-columns flex-reverse">
+            <div class="row">
+                <div class="column">
+                    <div class="column-1">
+                        <img src="images/blog/blog2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-2 bg-dark">
+                        <h2>Are financial newspapers dead?</h2>
+                        <p class="meta">
+                            <i class="fas fa-user"></i> Posted by <strong>Lionel Barber</strong> | May 10 2020
+                        </p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi recusandae doloribus libero
+                            esse. Quibusdam cum officiis cumque unde sit. At repellat sequi accusantium incidunt error
+                            ipsum illo laboriosam tempore unde! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Distinctio, consequatur?</p>
+                        <a href="post.html" class="btn btn-light">
+                            <i class="fas fa-chevron"></i>
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="flex-columns">
+            <div class="row">
+                <div class="column">
+                    <div class="column-1">
+                        <img src="images/blog/blog 3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-2 bg-light">
+                        <h2>Wall Street Bets</h2>
+                        <p class="meta">
+                            <i class="fas fa-user"></i> Posted by <strong>Steve Mnuchin</strong> | May 7 2020
+                        </p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi recusandae doloribus libero
+                            esse. Quibusdam cum officiis cumque unde sit. At repellat sequi accusantium incidunt error
+                            ipsum illo laboriosam tempore unde! Printer go brrrrrrrr. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Illo tempora facere expedita maiores debitis? At?</p>
+                        <a href="post.html" class="btn btn-dark">
+                            <i class="fas fa-chevron"></i>
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2020 - Crown Finance - by Cybero</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const navbar = document.getElementById("navbar");
+        let scrolled = false;
+
+        // toggles navbar class once scrolled past 100px on y axis i.e. down
+        window.onscroll = function () {
+            if (window.pageYOffset > 100) {
+                navbar.classList.remove("top");
+                if (!scrolled) {
+                    navbar.style.transform = "translateY(-70px)";
+                }
+                setTimeout(function () {
+                    navbar.style.transform = "translateY(0px)";
+                    scrolled = "true";
+                }, 200);
+            } else {
+                navbar.classList.add("top");
+                scrolled = false;
+            }
+        };
+    </script>
+</body>
+
+</html>
